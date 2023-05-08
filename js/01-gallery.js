@@ -38,10 +38,9 @@ function onImageClick(evt) {
     <img src="${evt.target.dataset.source}" width="800" height="600">`);
     instance.show();
 
-    galleryList.addEventListener('keydown', (evt) => {
+    window.addEventListener('keydown', (evt) => {
         if (evt.code === 'Escape') {
             instance.close();
         }
-    });
-
-}
+    }, {once: true});
+};
